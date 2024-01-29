@@ -163,10 +163,11 @@ h2{
   max-width: 92%;
   padding: 0 0 0 56px;
 }
-
 @media only screen and (min-width: 737px) and (max-width: 950px) {
   /* TABLETTE */
-
+  .header_haut {
+    padding: 15px 30px 75px;
+  }
 
   .header_bas {
     padding: 0px 30px 65px;
@@ -175,6 +176,7 @@ h2{
   .bloc {
     max-width: 42%;
     padding: 25px 0 0 0;
+    font-size: 13px;
   }
 
   #image_mockup {
@@ -185,7 +187,9 @@ h2{
 
 @media only screen and (min-width: 576px) and (max-width: 736px) {
   /*TABLETTE 2.0*/
-
+  .header_haut {
+    padding: 15px 20px 55px;
+  }
 
   .header_bas {
     padding: 15px 20px 75px;
@@ -194,6 +198,7 @@ h2{
   .bloc {
     max-width: 45%;
     padding: 12px 0 0 0;
+    font-size: 12px;
   }
 
   #image_mockup {
