@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huddle</title>
+    <link rel="stylesheet" href="header.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header_haut">
+        <div>
+          <img src="images/logo.svg" class="logo" alt="Logo Huddle" />
+        </div>
+        <div>
+          <button class="open-button" onclick="openForm()">Try It free</button>
+          <div class="form-popup" id="myForm">
+            <form action="" class="form-container">
+              <div>
+                <button type="button" class="btn cancel" onclick="closeForm()">
+                  ✖
+                </button>
+                <h2>Inscription</h2>
+              </div>
+
+              <div class="field">
+                <label for="lastname">Nom</label>
+                <input
+                  placeholder="Renseignez votre nom"
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                />
+              </div>
+              <div class="field">
+                <label for="firstname">Prénom</label>
+                <input
+                  placeholder="Renseignez votre prénom"
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                />
+              </div>
+
+              <label for="email"><b>Email</b></label>
+              <input
+                type="text"
+                placeholder="Renseignez votre adresse mail"
+                name="email"
+                required
+              />
+
+              <label for="psw"><b>Mot de passe</b></label>
+              <input
+                type="password"
+                placeholder="Choississez un mot de passe"
+                name="psw"
+                required
+              />
+
+              <button type="submit" class="btn">S'inscrire</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="header_bas">
+        <div class="bloc">
+          <h1>Build The Community Your Fans Will Love</h1>
+          <p>
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+          <button class="pink-btn" alt="bouton commencer gratuitement">
+            Get Started For Free
+          </button>
+        </div>
+        <div class="grande_image">
+          <img
+            src="images/illustration_mockups.svg"
+            id="image_mockup"
+            alt="Image de mockup d'écran d'ordinateur et de téléphone"
+          />
+        </div>
+      </div>
+    </header>
+  </body>
+
+  <script src="script.js"></script>
+</html>
