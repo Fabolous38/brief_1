@@ -20,41 +20,23 @@ window.onclick = function(event) {
 
 document.querySelector('.form-container').addEventListener('submit', function (event) {
   event.preventDefault();
-  // event.preventDefault() prevents the default behavior of the form submission, which is to reload the page. 
-  // By calling event.preventDefault(), the developer ensures that the form submission does not trigger a full page reload.
-  var lastname = document.getElementById('lastname');
-  var firstname = document.getElementById('firstname');
-  var email = document.getElementsByName('email')[0];
+// event.preventDefault() empêche le comportement par défaut de la soumission du formulaire, qui est de recharger la page. 
+// En appelant event.preventDefault(), on s'assure que la soumission du formulaire ne déclenche pas un rechargement complet de la page.
+
+
   var password = document.getElementsByName('psw')[0].value;
   
+// Vérifie si le mot de passe ne respecte pas les critères suivants :
+// - La longueur du mot de passe est inférieure à 6 caractères
+// - Le mot de passe ne contient pas au moins une lettre majuscule (A-Z)
+// - Le mot de passe ne contient pas au moins un chiffre (\d)
+if (password.length < 6 || !/[A-Z]/.test(password) || !/\d/.test(password)) {
+  // Affiche une alerte indiquant les critères non respectés
+  alert('Le mot de passe doit avoir au moins 6 caractères, une lettre majuscule et un chiffre.');
+  // Interrompt l'exécution du reste du code
+  return;
+}
 
-
-  // // Create an array of form fields
-  // var formFields = [lastname, firstname, email, password];
-
-  // // Flag to check if any field is empty
-  // var isEmpty = false;
-
-  // // Loop through form fields
-  // for (var i = 0; i < formFields.length; i++) {
-  //   // Check if the field is empty
-  //   if (!formFields[i].value.trim()) {
-  //     // Replace placeholder with an error message in red
-  //     formFields[i].setAttribute('placeholder', 'Veuillez remplir ce champ');
-  //     formFields[i].style.color = 'red';
-  //     isEmpty = true;
-  //   } else {
-  //     // Reset placeholder and text color if the field is not empty
-  //     formFields[i].setAttribute('placeholder', ''); // Reset placeholder
-  //     formFields[i].style.color = ''; // Reset text color
-  //   }
-  // }
-
-  // Check if password meets the criteria
-  if (password.length < 6 || !/[A-Z]/.test(password) || !/\d/.test(password)) {
-    alert('Le mot de passe doit avoir au moins 6 caractères, une lettre majuscule et un chiffre.');
-    return;
-  }
 
   // Clear the form
   document.querySelector('.form-container').reset();
